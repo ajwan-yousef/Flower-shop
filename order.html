@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flower Shop - Order</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+
+    <header>
+        <h1>Flower Shop Menu & Orders</h1>
+    </header>
+
+    <!-- شريط أزرار التنقل الثابت -->
+    <div class="nav-container">
+        <a href="index.html" class="nav-btn">Home</a>
+        <a href="order.html" class="nav-btn">Order Form</a>
+        <a href="index.html" class="nav-btn">About Us</a>
+        <a href="index.html" class="nav-btn">Contact</a>
+    </div>
+
+    <main>
+        <section class="content-box">
+            <h2>Our Flower Collection</h2>
+            
+            <div class="bouquet-grid">
+                <div class="bouquet-item">
+                    <img src="https://cdn.shopify.com/s/files/1/0911/9652/2863/files/acb033ce89ceb3f245bbc07def528c8a_400x400.jpg?v=1783916963" alt="Pink Romance Rose Bouquet" width="180">
+                    <p><strong>Pink Romance Rose Bouquet</strong></p>
+                </div>
+                
+                <div class="bouquet-item">
+                    <img src="https://cdn.shopify.com/s/files/1/0911/9652/2863/files/71cecd2ff1a5bc273ad983057ae0e299_400x400.jpg?v=1782985305" alt="Sunset Coral Rose Bouquet" width="180">
+                    <p><strong>Sunset Coral Rose Bouquet</strong></p>
+                </div>
+
+                <div class="bouquet-item">
+                    <img src="https://cdn.shopify.com/s/files/1/0911/9652/2863/files/a670597bfb121cdb10a191f59862647a_400x400.jpg?v=1785486246" alt="Cherry Blossom Vase Arrangement" width="180">
+                    <p><strong>Cherry Blossom Vase Arrangement</strong></p>
+                </div>
+
+                <div class="bouquet-item">
+                    <img src="https://cdn.shopify.com/s/files/1/0911/9652/2863/files/4b2a9614f80375e435347a69a150cb5a_1000x1000.jpg?v=1783492745" alt="Vintage Rustic Mixed Bouquet" width="180">
+                    <p><strong>Vintage Rustic Mixed Bouquet</strong></p>
+                </div>
+            </div>
+        </section>
+
+        <section class="content-box">
+            <h2>Place Your Order</h2>
+            <form onsubmit="return validateOrder()">
+                <label for="cName">Customer Name:</label><br>
+                <input type="text" id="cName" placeholder="Enter your name"><br><br>
+
+                <label for="bType">Select Bouquet:</label><br>
+                <select id="bType">
+                    <option value="pink">Pink Romance Rose Bouquet</option>
+                    <option value="coral">Sunset Coral Rose Bouquet</option>
+                    <option value="cherry">Cherry Blossom Vase Arrangement</option>
+                    <option value="rustic">Vintage Rustic Mixed Bouquet</option>
+                </select><br><br>
+
+                <button type="submit" class="action-btn">Submit Order</button>
+                <button type="button" class="action-btn" onclick="showInfo()">Quick Info</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Flower Shop</p>
+        <p>Fresh Flowers, Happy Moments!</p>
+    </footer>
+
+    <script>
+        function validateOrder() {
+            let name = document.getElementById("cName").value;
+            if (name === "") {
+                alert("Please enter your name!");
+                return false;
+            }
+            alert("Thank you " + name + "! Order submitted successfully.");
+            return true;
+        }
+
+        function showInfo() {
+            alert("All flowers are fresh and delivered daily! 🌸");
+        }
+    </script>
+
+</body>
+</html>
