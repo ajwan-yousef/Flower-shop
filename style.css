@@ -1,84 +1,92 @@
-* {
-    box-sizing: border-box;
+body {
+    font-family: Arial, sans-serif;
+    background-color: #fcf8f2;
+    color: #4a3d35;
+    text-align: center;
     margin: 0;
     padding: 0;
 }
 
-body {
-    font-family: Arial, Helvetica, sans-serif;
-    background-color: #fcf9f5;
-    color: #4a403a;
-    line-height: 1.6;
+header {
+    background-color: #8c6d58;
+    color: white;
     padding: 20px;
 }
 
-header {
-    text-align: center;
-    background-color: #d4a373;
-    color: white;
-    padding: 25px;
-    margin-bottom: 20px;
-}
-
 .nav-container {
-    text-align: center;
-    margin-bottom: 25px;
+    margin: 15px;
+    padding: 10px;
 }
 
 .nav-btn {
-    background-color: #ffffff;
-    color: #bc6c25;
-    border: 2px solid #ccd5ae;
-    padding: 10px 20px;
-    margin: 0 5px;
-    border-radius: 8px;
+    display: inline-block;
+    background-color: #8c6d58;
+    color: white;
+    padding: 8px 15px;
+    margin: 3px;
     text-decoration: none;
     font-weight: bold;
-    display: inline-block;
+    font-size: 13px;
 }
 
 .nav-btn:hover {
-    background-color: #ccd5ae;
-    color: #ffffff;
+    background-color: #6e5342;
 }
 
-main {
-    max-width: 700px;
-    margin: 0 auto;
+.hero-image-box {
+    margin: 20px;
+    padding: 15px;
+}
+
+.large-hero-img {
+    width: 500px;
+    height: auto;
+}
+
+.hero-text {
+    margin-top: 10px;
+    font-style: italic;
+    color: #6e5342;
 }
 
 .content-box {
-    background-color: #ffffff;
-    padding: 25px;
-    margin-bottom: 20px;
-    border: 1px solid #faedcd;
+    margin: 20px;
+    padding: 20px;
 }
 
-.content-box h2 {
-    color: #bc6c25;
-    margin-bottom: 12px;
-}
-
-.content-box p {
-    color: #6b5b52;
+.about-text {
+    text-align: left;
     margin-bottom: 15px;
+    font-size: 14px;
 }
 
-input[type="text"], select, textarea {
-    width: 100%;
+.why-list {
+    text-align: left;
+    margin-left: 25px;
+    color: #4a3d35;
+}
+
+.bouquet-item {
+    margin-bottom: 15px;
     padding: 10px;
-    border: 1px solid #d4a373;
-    background-color: #fffcf9;
-    font-size: 14px;
-    color: #4a403a;
-    outline: none;
 }
 
-footer {
-    text-align: center;
-    margin-top: 30px;
-    padding: 15px;
-    color: #8c7a6b;
-    font-size: 14px;
-    border-top: 1px solid #faedcd;
+input, select {
+    padding: 8px;
+    width: 250px;
+    margin-top: 5px;
+    border: 1px solid #8c6d58;
+}
+
+.action-btn {
+    background-color: #8c6d58;
+    color: white;
+    padding: 8px 15px;
+    margin: 5px;
+    border: none;
+    cursor: pointer;
+}
+
+.action-btn:hover {
+    background-color: #6e5342;
 }
