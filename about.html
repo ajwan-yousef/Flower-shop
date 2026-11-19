@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flower Shop - About Us</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>About Our Flower Shop</h1>
+        <p>Flowers make every moment special</p>
+    </header>
+
+    
+    <div class="nav-container">
+        <a href="index.html" class="nav-btn">Home</a>
+        <a href="order.html" class="nav-btn">Order Form</a>
+        <a href="about.html" class="nav-btn">About Us</a>
+        <a href="contact.html" class="nav-btn">Contact</a>
+    </div>
+
+    <main>
+
+       
+        <section class="about-hero">
+
+           <img src="./images/flower-shop.jpg"
+            alt="Flower Shop" class="about-image">
+
+            <h2>Welcome to Our World of Flowers</h2>
+
+            <p>Where every flower tells a beautiful story.</p>
+
+            <button class="action-btn"
+            onclick="document.getElementById('story').scrollIntoView();">
+                Discover Our Story
+            </button>
+
+        </section>
+
+
+        
+        <section class="content-box story-box" id="story">
+
+            <h2>Our Story</h2>
+
+            <p class="about-text">
+                Flower Shop was created from a love of flowers
+                and the beauty they bring to everyday life.
+                We believe that flowers are more than just gifts.
+                They are a special way to express love, happiness,
+                and appreciation.
+            </p>
+
+        </section>
+
+
+       
+        <section class="content-box story-box">
+
+            <h2>Our Mission</h2>
+
+            <p class="about-text">
+                Our mission is to bring joy to our customers
+                by offering beautiful and fresh flower arrangements.
+                We work hard to make every bouquet special
+                and every occasion unforgettable.
+            </p>
+
+        </section>
+
+
+      
+        <section class="content-box">
+
+            <h2>Why Choose Us?</h2>
+
+            <div class="values-container">
+
+                <div class="value-item">
+
+                    <h3>Fresh Flowers</h3>
+
+                    <p>We choose fresh and beautiful flowers
+                    for every bouquet.</p>
+
+                    <button class="action-btn"
+                    onclick="showMessage('fresh')">
+                        Learn More
+                    </button>
+
+                </div>
+
+
+                <div class="value-item">
+
+                    <h3>Special Designs</h3>
+
+                    <p>Every arrangement is created
+                    with care and creativity.</p>
+
+                    <button class="action-btn"
+                    onclick="showMessage('design')">
+                        Learn More
+                    </button>
+
+                </div>
+
+
+                <div class="value-item">
+
+                    <h3>Happy Moments</h3>
+
+                    <p>We help you share love and happiness
+                    through flowers.</p>
+
+                    <button class="action-btn"
+                    onclick="showMessage('happy')">
+                        Learn More
+                    </button>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    
+    <script>
+
+        function showMessage(type) {
+
+            if (type === "fresh") {
+                alert("We always choose fresh flowers!");
+            }
+
+            else if (type === "design") {
+                alert("Our bouquets are designed with creativity!");
+            }
+
+            else if (type === "happy") {
+                alert("We love making people happy!");
+            }
+
+        }
+
+    </script>
+
+</body>
+</html>
