@@ -3,27 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Order Page - Flower Shop</title>
-    <link rel="stylesheet" href="style.css">
-    
-    <script>
-        function validateAndSubmit() {
-            var clientName = document.getElementById("customerName").value;
-            
-            if (clientName === "") {
-                window.alert("Please enter your full name before submitting!");
-                return false;
-            } else {
-                window.alert("Thank you, " + clientName + "! Your flower order has been successfully placed.");
-                return true;
-            }
-        }
-    </script>
+    <title>Flower Shop - Order</title>
+    <link rel="stylesheet" href="./style.css">
 </head>
 <body>
 
     <header>
-        <h1>Flower Shop Menu & Orders</h1>
+        <h1>Flower Shop Menu &amp; Orders</h1>
     </header>
 
     <div class="nav-container">
@@ -35,37 +21,61 @@
 
     <main>
         <section class="content-box">
-            <h2>Order Your Flower Bouquet</h2>
-            <p>Please fill out the form below to complete your order:</p>
-            
-            <form onsubmit="return validateAndSubmit();">
-                <div style="margin-bottom: 15px;">
-                    <label>Full Name:</label><br>
-                    <input type="text" id="customerName" placeholder="Enter your name here" style="width: 100%; padding: 8px; margin-top: 5px;">
+            <h2>Our Flower Collection</h2>
+            <div class="bouquet-grid">
+                <div class="bouquet-item">
+                    <img src="https://cdn.shopify.com/s/files/1/0911/9652/2863/files/acb033ce89ceb3f245bbc07def528c8a_400x400.jpg?v=1783916963" alt="Pink Romance Rose Bouquet" width="180">
+                    <p><strong>Pink Romance Rose Bouquet</strong></p>
                 </div>
 
-                <div style="margin-bottom: 15px;">
-                    <label>Select Bouquet:</label><br>
-                    <select style="width: 100%; padding: 8px; margin-top: 5px;">
-                        <option>Luxury Red Roses</option>
-                        <option>White Tulips Bouquet</option>
-                        <option>Mixed Pastel Flowers</option>
-                    </select>
+                <div class="bouquet-item">
+                    <img src="https://cdn.shopify.com/s/files/1/0911/9652/2863/files/71cecd2ff1a5bc273ad983057ae0e299_400x400.jpg?v=1782985305" alt="Sunset Coral Rose Bouquet" width="180">
+                    <p><strong>Sunset Coral Rose Bouquet</strong></p>
                 </div>
 
-                <div style="margin-bottom: 15px;">
-                    <label>Additional Notes:</label><br>
-                    <textarea placeholder="Any special requests or gift card notes..." style="width: 100%; padding: 8px; margin-top: 5px; height: 80px;"></textarea>
+                <div class="bouquet-item">
+                    <img src="https://cdn.shopify.com/s/files/1/0911/9652/2863/files/a670597bfb121cdb10a191f59862647a_400x400.jpg?v=1785486246" alt="Cherry Blossom Vase Arrangement" width="180">
+                    <p><strong>Cherry Blossom Vase Arrangement</strong></p>
                 </div>
 
-                <button type="submit" class="nav-btn" style="background-color: #d4a373; color: white; border: none; cursor: pointer; width: 100%; padding: 10px;">Submit Order</button>
+                <div class="bouquet-item">
+                    <img src="https://cdn.shopify.com/s/files/1/0911/9652/2863/files/4b2a9614f80375e435347a69a150cb5a_1000x1000.jpg?v=1783492745" alt="Vintage Rustic Mixed Bouquet" width="180">
+                    <p><strong>Vintage Rustic Mixed Bouquet</strong></p>
+                </div>
+            </div>
+        </section>
+
+        <section class="content-box">
+            <h2>Place Your Order</h2>
+            <form onsubmit="return validateOrder()">
+                <label for="cName">Customer Name:</label><br>
+                <input type="text" id="cName" placeholder="Enter your name"><br><br>
+
+                <label for="bType">Select Bouquet:</label><br>
+                <select id="bType">
+                    <option value="Pink Romance Rose Bouquet">Pink Romance Rose Bouquet</option>
+                    <option value="Sunset Coral Rose Bouquet">Sunset Coral Rose Bouquet</option>
+                    <option value="Cherry Blossom Vase Arrangement">Cherry Blossom Vase Arrangement</option>
+                    <option value="Vintage Rustic Mixed Bouquet">Vintage Rustic Mixed Bouquet</option>
+                </select><br><br>
+
+                <button type="submit" class="action-btn">Submit Order</button>
             </form>
         </section>
     </main>
 
-    <footer>
-        <p>Fresh Flowers, Happy Moments!</p>
-    </footer>
+    <script>
+        function validateOrder() {
+            var name = document.getElementById("cName").value;
+            var bouquet = document.getElementById("bType").value;
+            if (name === "") {
+                alert("Please enter your name!");
+                return false;
+            }
+            alert("Thank you " + name + "! Your order for " + bouquet + " is submitted.");
+            return true;
+        }
+    </script>
 
 </body>
 </html>
